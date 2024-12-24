@@ -73,3 +73,8 @@ Mon choix s’est naturellement porté sur Angular pour le front-end, pour plusi
     Bonnes pratiques et maintenabilité : Angular impose une structure de projet bien définie, ce qui favorise des applications plus maintenables et évolutives. Cela est particulièrement utile pour des projets en équipe où une convention de code claire est nécessaire.
 
 Ces choix techniques reflètent mon envie de travailler avec des technologies fiables, modernes, compatible avec le travail en équipe, et en adéquation avec le marché du travail local.
+
+### Good practice :
+sémentique html :
+pour des raisons d'accessibilité, les liseuses par exemple, utiliser dans l'ordre h1 h2 h3. pour modifier les tailles, utiliser plutot le style et non les balises h.
+point de vue sémentique, grand titre de la page h1, sous titre h2, sous sous titre h3 >etc>

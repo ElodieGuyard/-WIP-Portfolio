@@ -1,3 +1,13 @@
-<div class="md:container">
-    <app-project-card></app-project-card>
+<div class="container mx-auto flex justify-center items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div class="mb-6" style="max-width: 380px; min-width: 380px;">
+            <app-project-card [projectName]="'Simple Angular App'"></app-project-card>
+        </div>        
+        <div class="mb-6" style="max-width: 380px; min-width: 380px;">
+            <app-project-card [projectName]="'Simple mobile App'"></app-project-card>
+        </div>        
+        <div class="mb-6" style="max-width: 380px; min-width: 380px;">
+            <app-project-card [projectName]="'Simple pyhon App'"></app-project-card>
+        </div>
+    </div>
 </div>
