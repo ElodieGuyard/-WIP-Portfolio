@@ -1,11 +1,14 @@
 import { Component, Input } from '@angular/core';
+import { project } from '../_models/project';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-project-card',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule], // Nécessaire pour *ngFor et *ngIf
   templateUrl: './project-card.component.html',
   styleUrl: './project-card.component.css'
 })
 export class ProjectCardComponent {
-  @Input() projectName: string ="";
+  @Input() project = {} as project;
 }
