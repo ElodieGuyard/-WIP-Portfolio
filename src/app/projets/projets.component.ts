@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ProjectCardComponent } from "../project-card/project-card.component";
-import { project } from "../_models/project";
+import { project } from "../_models/Project";
 import { tag } from "../_models/Tag";
 
 @Component({
