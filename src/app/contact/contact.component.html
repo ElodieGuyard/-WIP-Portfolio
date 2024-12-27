@@ -1,1 +1,21 @@
-<p>contact works!</p>
+<div class="container mx-auto max-w-[800px]">
+    <div class="text-center border mb-5 shadow-lg rounded">
+        <h2 class="text-xl font-bold">Contact</h2>
+        <p>I can be reached at the following email : <b><a href="mailto:{{ contactEmail }}">{{ contactEmail }}</a></b></p>
+        <p>Feel free to connect with me on any of the following platforms</p>
+    </div>
+    
+    <div class="mx-auto flex justify-center">
+        <ul class="w-48 text-sm font-medium dark:border-gray-600">
+            <li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">
+                <img src="../../assets/github_logo.png" alt="github's logo" class="w-[32px]">
+                <a href="{{contactGithub}}" target="_blank" class="gap-3 py-3">Github</a>
+            </li>
+            <li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">
+                <img src="../../assets/Linkedin.png" alt="linkedin's logo" class="w-[32px]">
+                <a href="{{contactLinkedIn}}" target="_blank" class="gap-3 py-3">Linkedin</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
