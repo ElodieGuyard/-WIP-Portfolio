@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { project } from '../_models/Project';
+import { Project } from '../_models/Project';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -10,5 +10,5 @@ import { CommonModule } from '@angular/common';
   styleUrl: './project-card.component.css'
 })
 export class ProjectCardComponent {
-  @Input() project = {} as project;
+  @Input() project = {} as Project;
 }
