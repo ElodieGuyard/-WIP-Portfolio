@@ -1,12 +1,6 @@
 <div class="container mx-auto flex justify-center items-center">
-    <div class="grid grid-cols-1 lg:grid-cols-3 lg:gap-6">
-        <div class="mb-6 max-w-[380px] lg:min-w-[380px]">
-            <app-project-card [project]="project"></app-project-card>
-        </div>        
-        <div class="mb-6 max-w-[380px] lg:min-w-[380px]">
-            <app-project-card [project]="project"></app-project-card>
-        </div>        
-        <div class="mb-6 max-w-[380px] lg:min-w-[380px]">
+    <div class="grid grid-cols-1 lg:grid-cols-3 lg:gap-6">       
+        <div *ngFor="let project of projects" class="mb-6 max-w-[380px] lg:min-w-[380px]">
             <app-project-card [project]="project"></app-project-card>
         </div>
     </div>
