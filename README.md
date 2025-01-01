@@ -78,3 +78,101 @@ Ces choix techniques reflètent mon envie de travailler avec des technologies fi
 sémentique html :
 pour des raisons d'accessibilité, les liseuses par exemple, utiliser dans l'ordre h1 h2 h3. pour modifier les tailles, utiliser plutot le style et non les balises h.
 point de vue sémentique, grand titre de la page h1, sous titre h2, sous sous titre h3 >etc>
+
+## Documentation du Problème de Prérendu avec Paramètres de route Dynamiques
+Contexte
+Lors de la configuration du prérendu pour une application Angular utilisant des routes dynamiques, une erreur est survenue indiquant que la fonction getPrerenderParams est manquante pour la route projects/:id. Le projet utilise des composants et services autonomes avec Angular v19 et la nouvelle fonctionnalité de mode de rendu au niveau des routes.
+
+Erreurs Rencontrées
+Erreur de Prérendu:
+```
+The 'projects/:id' route uses prerendering and includes parameters, but 'getPrerenderParams' is missing. Please define 'getPrerenderParams' function for this route in your server routing configuration or specify a different 'renderMode'.
+```
+
+Erreur de Correspondance de Route:
+
+```
+The 'projects/*' server route does not match any routes defined in the Angular routing configuration (typically provided as a part of the 'provideRouter' call). Please make sure that the mentioned server route is present in the Angular routing configuration.
+```
+Configuration Actuelle
+
+app.routes.ts
+
+```
+import { Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { ProjetsComponent } from './projets/projets.component';
+import { ContactComponent } from './contact/contact.component';
+import { ProjectDetailsComponent } from './project-details/project-details.component';
+
+export const routes: Routes = [
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
+    { path: 'home', component: HomeComponent },
+    { path: 'projets', component: ProjetsComponent },
+    { path: 'contact', component: ContactComponent },
+    { path: 'projects/:name', component: ProjectDetailsComponent }
+];
+```
+app.routes.server.ts
+```
+.routes.server.ts
+import { RenderMode, ServerRoute } from '@angular/ssr';
+import { ProjectsService } from './_services/projects.service';
+import { inject } from '@angular/core';
+
+export const serverRoutes: ServerRoute[] = [
+  {
+    path: '**',
+    renderMode: RenderMode.Prerender
+  },
+  {
+    path: 'projects/:id',
+    renderMode: RenderMode.Prerender,
+    async getPrerenderParams() {
+      const projectService = inject(ProjectsService);
+      const projects = projectService.GetProjects();
+      return projects.map(project => ({ id: project.id.toString() }));
+    },
+  }
+];
+```
+Fichier projects.service.ts
+```
+import { Injectable } from '@angular/core';
+import { Project } from '../_models/Project';
+import { tag } from '../_models/Tag';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ProjectsService {
+  projects: Project[] = [
+    { id: 0, name: 'Sample Angular App', summary: 'Test Description', description: 'Lorem ipsum dolor sit amet...', projectlink: '//www.github.com', pictures: [], tags: [tag.ANGULAR, tag.TYPESCRIPT] },
+    // autres projets...
+  ];
+
+  GetProjects() {
+    return this.projects;
+  }
+
+  GetProjectById(id: number): Project {
+    let project = this.projects.find(project => project.id === id);
+    if (project === undefined) {
+      throw new TypeError("There is no project that matches the id: " + id);
+    }
+    return project;
+  }
+}
+```
+Fichier main.ts
+```
+import { bootstrapApplication } from '@angular/platform-browser';
+import { appConfig } from './app/app.config';
+import { AppComponent } from './app/app.component';
+
+bootstrapApplication(AppComponent, appConfig)
+  .catch((err) => console.error(err));
+  ```
+
+  Solution : Creer manuellement des pages statiques pour ne plus rencontrer ce problème
+  OU trouver une version d'angular antérieure qui supporterai angular universal

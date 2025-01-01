@@ -3,7 +3,7 @@
     <div class="px-6 py-4">
       <h3 class="font-bold text-xl mb-2">{{project.name}}</h3>
       <p class="text-gray-700 text-base">{{project.summary}}</p>
-      <button [routerLink]="['/projects', project.name]" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">View More</button>
+      <button [routerLink]="['/projects', project.id]" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">View More</button>
     </div>
     <div class="max-auto flex justify-center p-3">
       <div class="inline-block" *ngFor="let tag of project.tags">
