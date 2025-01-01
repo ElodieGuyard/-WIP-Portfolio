@@ -1,0 +1,10 @@
+<div *ngIf="project">
+    <h1>{{ project.name }}</h1>
+    <p>{{ project.description }}</p>
+    <a [href]="project.projectlink" target="_blank" class="btn btn-success">Voir le projet</a>
+    <button routerLink="/projets" class="">back</button>
+  </div>
+
+  <div *ngIf="!project">
+    <p>Projet introuvable. Vérifiez l'URL.</p>
+  </div>
