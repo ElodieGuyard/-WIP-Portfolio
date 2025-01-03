@@ -8,7 +8,7 @@ import { tag } from '../_models/Tag';
 export class ProjectsService {
   
     projects: Project[] = [
-      {id: 0, name: 'Sample Agular App', summary: 'Test Description', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', projectlink: '//www.github.com', pictures: [], tags: [tag.ANGULAR, tag.TYPESCRIPT] },
+      {id: 0, name: 'Ce portfolio', summary: "Site web ayant pour vocation de me permettre de montrer ce que j//'aime faire, et mes compétences. C'est un des premiers projets où j//'ai été seule maître des choix techniques", description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', projectlink: '//www.github.com', pictures: [], tags: [tag.ANGULAR, tag.TYPESCRIPT] },
       {id: 1, name: 'Another Agular App', summary: 'Test Description', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', projectlink: '//www.github.com', pictures: [], tags: [tag.ANGULAR, tag.TYPESCRIPT] },
       {id: 2, name: '3Sample Agular App', summary: 'Test Description', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', projectlink: '//www.github.com', pictures: [], tags: [tag.ANGULAR, tag.TYPESCRIPT] },
       {id: 3, name: '4Sample Agular App', summary: 'Test Description', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', projectlink: '//www.github.com', pictures: [], tags: [tag.ANGULAR, tag.TYPESCRIPT] },
