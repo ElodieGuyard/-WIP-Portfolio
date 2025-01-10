@@ -176,3 +176,8 @@ bootstrapApplication(AppComponent, appConfig)
 
   Solution : Creer manuellement des pages statiques pour ne plus rencontrer ce problème
   OU trouver une version d'angular antérieure qui supporterai angular universal
+
+  ## Améliorations possible :
+  #Page Resume
+- Rendre accessible mon CV, actuellement display en tant qu'image, une liseuse ne pourrait pas lire mon CV, uniquement son alt qui ne contient pas toutes les informations. J'ai trouvé ce package de pdf viewer https://www.npmjs.com/package/ng2-pdf-viewer, je ne sais pas encore s'il est en mesure de rendre accessible mon cv en pdf
+- Ajoute un bouton qui permet le téléchargement ou l'impression du CV, un lien qui ouvrirai vers une autre tab pourrait tout à fait convenir
