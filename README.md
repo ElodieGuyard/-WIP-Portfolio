@@ -74,12 +74,28 @@ Mon choix s’est naturellement porté sur Angular pour le front-end, pour plusi
 
 Ces choix techniques reflètent mon envie de travailler avec des technologies fiables, modernes, compatible avec le travail en équipe, et en adéquation avec le marché du travail local.
 
-### Good practice :
-sémentique html :
-pour des raisons d'accessibilité, les liseuses par exemple, utiliser dans l'ordre h1 h2 h3. pour modifier les tailles, utiliser plutot le style et non les balises h.
-point de vue sémentique, grand titre de la page h1, sous titre h2, sous sous titre h3 >etc>
+# Good practices d'accessibilités que je voudrai appliquer à ce projet :
 
-## Documentation du Problème de Prérendu avec Paramètres de route Dynamiques
+- Sémentique html : utiliser dans l'ordre h1 h2 h3. pour modifier les tailles, utiliser plutot le style et non les balises h. Du point de vue sémentique, grand titre de la page h1, sous titre h2, sous sous titre h3 <etc> : OK
+- Contrastes répondant aux critères AAA
+
+# Améliorations souhaitées :
+
+### Partout :
+- un maximum de critères d'accessibilité valides
+- un bouton qui permet de passer du white mode au dark mode
+  
+### Page Resume
+
+- Rendre accessible mon CV, actuellement display en tant qu'image, une liseuse ne pourrait pas lire mon CV, uniquement son alt qui ne contient pas toutes les informations. J'ai trouvé ce package de pdf viewer https://www.npmjs.com/package/ng2-pdf-viewer, je ne sais pas encore s'il est en mesure de rendre accessible mon cv en pdf
+- Ajoute un bouton qui permet le téléchargement ou l'impression du CV, un lien qui ouvrirai vers une autre tab pourrait tout à fait convenir
+
+### Une page dédiée aux informations pour développer un site web accessible avec des exemples
+
+## Problèmes rencontrés :
+
+<details>
+<summary>Documentation du Problème de Prérendu avec Paramètres de route Dynamiques</summary> 
 Contexte
 Lors de la configuration du prérendu pour une application Angular utilisant des routes dynamiques, une erreur est survenue indiquant que la fonction getPrerenderParams est manquante pour la route projects/:id. Le projet utilise des composants et services autonomes avec Angular v19 et la nouvelle fonctionnalité de mode de rendu au niveau des routes.
 
@@ -176,8 +192,4 @@ bootstrapApplication(AppComponent, appConfig)
 
   Solution : Creer manuellement des pages statiques pour ne plus rencontrer ce problème
   OU trouver une version d'angular antérieure qui supporterai angular universal
-
-  ## Améliorations possible :
-  #Page Resume
-- Rendre accessible mon CV, actuellement display en tant qu'image, une liseuse ne pourrait pas lire mon CV, uniquement son alt qui ne contient pas toutes les informations. J'ai trouvé ce package de pdf viewer https://www.npmjs.com/package/ng2-pdf-viewer, je ne sais pas encore s'il est en mesure de rendre accessible mon cv en pdf
-- Ajoute un bouton qui permet le téléchargement ou l'impression du CV, un lien qui ouvrirai vers une autre tab pourrait tout à fait convenir
+  </details>
