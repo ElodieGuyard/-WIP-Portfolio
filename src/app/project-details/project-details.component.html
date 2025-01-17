@@ -1,9 +1,10 @@
 <div *ngIf="project">
     <img *ngFor="let picture of project.pictures" [src]='[picture]' alt="{{ project.name }}" class="">
-    <h1>{{ project.name }}</h1>
+    <h1 class="font-bold text-xl mb-2">{{ project.name }}</h1>
+    <p>{{ project.summary }}</p>
     <p>{{ project.description }}</p>
-    <a [href]="project.projectlink" target="_blank" class="btn btn-success">Voir le projet</a>
-    <button routerLink="/projets" class="">back</button>
+    <a [href]="project.projectlink" target="_blank" class="">Voir le projet</a>
+    <button routerLink="/projets" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">back</button>
   </div>
 
   <div *ngIf="!project">
