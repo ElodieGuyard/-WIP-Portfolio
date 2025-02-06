@@ -98,7 +98,6 @@
 
         .sidebar h3 {
             font-size: 1.25rem;
-            margin-bottom: 10px;
             font-weight: bold;
         }
         
@@ -124,6 +123,7 @@
             border-color: #83695a;
             border-radius: 15px;
             margin-top: 20px;
+            padding-bottom: 10px;
         }
         
         .toolsBox ul li {
@@ -139,4 +139,6 @@
             border-style: none none solid none;
             border-width: 2px;
             border-color: #83695a;
+            padding: 9px;
+            margin-bottom: 10px;
         }

@@ -10,22 +10,21 @@ import html2canvas from 'html2canvas';
 })
 export class ResumeComponent {
 
-  generatePDF(){
-    const elementToPrint = document.getElementById('contentToConvert');
-    
-    if (elementToPrint) {
-    html2canvas(elementToPrint, { scale: 2}).then((canva)=> {
-      const pdf = new jsPDF();
-      pdf.addImage(canva.toDataURL('image/png'), 'PNG', 0, 0, 211, 298);
 
-      pdf.setProperties({
-        title:'Resume Elodie Guyard',
-        author:'ElodieGuyard'
+    generatePDF(): void {
+      const elementToPrint = document.getElementById('contentToConvert');
+      if (!elementToPrint) return;
+  
+      const pdf = new jsPDF('p', 'mm', 'a4');
+      pdf.html(elementToPrint, {
+        callback: function (pdf) {
+          pdf.save('ResumeElodieGuyard.pdf');
+        },
+        x: 0,
+        y: 0,
+        html2canvas: {
+          scale: 0.17 // Adjust the scale if needed
+        }
       });
-
-      pdf.setFontSize(11);
-      pdf.save('ResumeElodieGuyard.pdf');
-    })
-  }
-  }
+    }
 }
