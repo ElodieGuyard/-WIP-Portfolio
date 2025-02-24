@@ -2,3 +2,85 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Thème clair par défaut */
+:root { 
+    --primary-color: #305ec2;
+    --accent-color: #e91e63;
+    --warn-color: #f44336;
+    --background-color: #ffffff;
+    --text-color: #000000;
+  }
+  
+  /* Thème sombre */
+  .dark-theme {
+    --primary-color: #bb86fc;
+    --accent-color: #0055fe;
+    --warn-color: #cf6679;
+    --background-color: #121212;
+    --text-color: #ffffff;
+  }
+  
+  /* Mode contraste élevé */
+  .high-contrast {
+    --primary-color: hsl(308, 97%, 41%);
+    --accent-color: #ffff00;
+    --warn-color: #ff0000;
+    --background-color: #17001E;
+    --text-color: #ffff00;
+    font-weight: bold;
+  }
+  
+  /* Appliquer aux composants */
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: hsl(0, 0%, 100%);
+      --text-color: #000000;
+    }
+  }
+  
+button.active {
+    background: var(--background-color);
+    color: var(--text-color);
+    border-radius:10px;
+    border-style: solid;
+    border-color: var(--accent-color);
+    border-width: 5px;
+    box-shadow: 0px 0px 0px 1px rgba(0, 85, 255, 0.12),
+    0px 8px 40px 0px rgba(0, 85, 255, 0.5);
+    padding: 1rem;
+    font-weight: bolder;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Bouton désactivé */
+button.disabled {
+    background: var(--background-color);
+    color: var(--text-color);
+    border-radius:10px;
+    border-style: solid;
+    border-color: var(--warn-color);
+    border-width: 5px;
+    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.6);
+    padding: 1rem;
+    font-weight: bolder;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /* Hover pour donner du feedback */
+  button:hover {
+    opacity: 0.8;
+  }
+
+.button-container {
+    display: flex;  /* Active le mode flexbox */
+    justify-content: center;  /* Centre les boutons horizontalement */
+    gap: 10px;  /* Ajoute un espace entre les boutons */
+}
