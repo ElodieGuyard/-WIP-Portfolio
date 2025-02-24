@@ -5,7 +5,7 @@
 
 /* Thème clair par défaut */
 :root { 
-    --primary-color: #305ec2;
+    --primary-color: #f4ece6;
     --accent-color: #e91e63;
     --warn-color: #f44336;
     --background-color: #ffffff;
@@ -28,7 +28,6 @@
     --warn-color: #ff0000;
     --background-color: #17001E;
     --text-color: #ffff00;
-    font-weight: bold;
   }
   
   /* Appliquer aux composants */

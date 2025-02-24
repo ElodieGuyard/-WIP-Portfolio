@@ -2,7 +2,7 @@
     <!--<img class="w-full" src="/img/card-top.jpg" alt="Sunset in the mountains">-->
     <div class="px-6 py-4">
       <h3 class="font-bold text-xl mb-2">{{project.name}}</h3>
-      <p class="text-gray-700 text-base">{{project.summary}}</p>
+      <p>{{project.summary}}</p>
       <button [routerLink]="['/projects', project.id]" class=" hover:bg-blue-700">View More</button>
     </div>
     <div class="max-auto flex justify-center p-3">
