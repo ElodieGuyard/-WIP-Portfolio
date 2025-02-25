@@ -27,7 +27,7 @@ export class ProjectDetailsComponent {
     // Extraire l'ID depuis le chemin, par exemple 'projects/1'
     const id = routePath ? parseInt(routePath.split('/')[1], 10) : NaN;
     
-    console.log('ID du projet extrait :', id);
+    //console.log('ID du projet extrait :', id);
     
     if (!isNaN(id)) {
       this.project = this.projectService.GetProjectById(id);
