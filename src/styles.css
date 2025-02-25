@@ -83,3 +83,29 @@ button.disabled {
     justify-content: center;  /* Centre les boutons horizontalement */
     gap: 10px;  /* Ajoute un espace entre les boutons */
 }
+
+
+
+/* Quand le mode sombre est activé */
+body.dark-theme .background-video {
+    display: block;
+    position: fixed; /* Fixé pour qu'elle reste en arrière-plan */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Ajuste la vidéo pour couvrir tout l'écran */
+    z-index: -1; /* Place la vidéo en arrière-plan */
+}
+
+/* Masquer la vidéo par défaut */
+.background-video {
+    display: none;
+}
+
+/* Contenu au-dessus de la vidéo */
+.content {
+    position: relative; /* S'assurer que le contenu est au-dessus */
+    z-index: 1; /* Supérieur à -1 pour être au-dessus de la vidéo */
+    text-align: center;
+}
