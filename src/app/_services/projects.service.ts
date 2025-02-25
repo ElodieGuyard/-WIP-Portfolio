@@ -11,14 +11,16 @@ export class ProjectsService {
       {
         id: 0, 
         name: 'Ce portfolio',
-        summary: "Site web ayant pour vocation de me permettre de montrer ce que j'aime faire, et mes compétences. C'est un des premiers projets où j'ai été seule maître des choix techniques", 
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 
+        summary: "Site web ayant pour vocation de me permettre de montrer ce que j'aime faire, et mes compétences. C'est un des premiers projets où j'ai été seule maître des choix techniques.", 
+        description: 
+        'J\ai choisi Angular pour ce portfolio, avec Tailwind pour m\aider à mettre en place rapidement un peu de style. Style : Pour m\'aider à rendre ce portfolio joli, j\'ai pris la liberté de chercher un modèle afin de m\'entraîner à créer des éléments HTML CSS car réinventer la roue prends beaucoup de temps.', 
         projectlink: 'https://github.com/ElodieGuyard/-WIP-Portfolio', 
         pictures: [], 
-        tags: [tag.ANGULAR, tag.TYPESCRIPT] 
+        tags: [tag.ANGULAR, tag.TYPESCRIPT, tag.HTML, tag.CSS] 
       },
 
-      {id: 1, 
+      {
+        id: 1, 
         name: 'API Pokedex', 
         summary: "Mon tout premier projet perso. J'en suis à mon 5ème mois de formation et je souhaite alors me challenger. C'est là que me viens l'idée de produire une API ´simple´ et à ma porté. Le but est alors de creer un endpoint qui renvoie les données du pokemon X. Le challenge était de lire un fichier au forma JSON, de traiter la demande X, et de renvoyer les données demandées", 
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 
