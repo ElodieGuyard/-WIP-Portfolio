@@ -69,6 +69,11 @@ export class AppComponent implements OnInit {
         } 
       }
   }
+
+  pauseVid(){
+    let vid = document.getElementById("backgroundVid");
+    if (vid) (vid as HTMLMediaElement).pause();
+  }
   
   constructor(@Inject(PLATFORM_ID) private platformId: any) {}
   

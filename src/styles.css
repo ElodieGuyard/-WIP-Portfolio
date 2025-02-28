@@ -84,9 +84,7 @@ button.disabled {
     gap: 10px;  /* Ajoute un espace entre les boutons */
 }
 
-
-
-/* Quand le mode sombre est activé */
+/* Quand le mode sombre est activé, style de la vidéo en background */
 body.dark-theme .background-video {
     display: block;
     position: fixed; /* Fixé pour qu'elle reste en arrière-plan */
@@ -103,7 +101,17 @@ body.dark-theme .background-video {
     display: none;
 }
 
-/* Contenu au-dessus de la vidéo */
+/*Quand le mode sombre est activé, le bouton "stop vidéo" s'affiche */
+body.dark-theme .btnStopVideo {
+    display: block;
+}
+
+/* Masquer le bouton stop vidéo par défaut */
+.btnStopVideo {
+    display : none;
+}
+
+/* Contenu au-dessus (Z) de la vidéo */
 .content {
     position: relative; /* S'assurer que le contenu est au-dessus */
     z-index: 1; /* Supérieur à -1 pour être au-dessus de la vidéo */
