@@ -6,7 +6,7 @@
 /* Thème clair par défaut */
 :root { 
     --primary-color: #f4ece6;
-    --accent-color: #e91e63;
+    --accent-color: rgba(255,255,255, .1);
     --warn-color: #f44336;
     --background-color: #ffffff;
     --text-color: #000000;
@@ -15,7 +15,7 @@
   /* Thème sombre */
   .dark-theme {
     --primary-color: #bb86fc;
-    --accent-color: #0055fe;
+    --accent-color: rgba(255,255,255, .1);
     --warn-color: #cf6679;
     --background-color: #121212;
     --text-color: #ffffff;

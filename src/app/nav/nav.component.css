@@ -1,5 +1,13 @@
 .navBackground {
-    background: linear-gradient(128deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 80%, rgba(255,255,180,1) 82%, rgba(255,234,63,1) 84%, rgba(191,255,89,1) 86%, rgba(49,251,105,1) 88%, rgba(0,255,246,1) 90%, rgba(0,212,255,1) 92%, rgba(0,93,255,1) 94%, rgba(61,0,255,1) 96%, rgba(255,0,213,1) 98%, rgba(255,0,16,1) 100%); 
-    background: var(--background-color);
     color: var(--text-color);
+}
+
+nav {
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: var(--accent-color);
+    border-width: 0px 0px 1px 0px;
+    opacity: 1;
+    backdrop-filter: blur(10px);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 6.64%, rgba(0, 0, 0, 0.1));
 }
