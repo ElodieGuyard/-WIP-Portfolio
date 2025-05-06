@@ -1,0 +1,7 @@
+.homeCard {
+    text-align: center;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: var(--accent-color);
+    border-width: 1px;
+}
