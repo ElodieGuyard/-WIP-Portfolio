@@ -4,4 +4,7 @@
     border-style: solid;
     border-color: var(--accent-color);
     border-width: 1px;
+    background : linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,.3));
+    backdrop-filter: blur(20px);
+    opacity : 1;
 }
